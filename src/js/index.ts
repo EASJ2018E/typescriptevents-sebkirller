@@ -7,11 +7,16 @@ let counter = 0;
 // Button click event.
 btn.addEventListener("click", () => {
     if (inputElement.value != null && inputElement.value !== "") {
-        let node = document.createElement("li");
+        const node = document.createElement("li");
         node.setAttribute("id", String(counter));
         node.appendChild(document.createTextNode(inputElement.value));
         ul.appendChild(node);
-        console.log("Added item with Id: " + counter);
         counter++;
     }
+});
+
+// Hides element on click. Only on USUND
+ul.addEventListener("click", (e: MouseEvent) => {
+    const element = e.target as HTMLLIElement;
+    element.hidden = true;
 });
