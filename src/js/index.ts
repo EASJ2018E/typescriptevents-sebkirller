@@ -1,1 +1,1 @@
-//Her skal du skrive din typescriptkode
+// Her skal du skrive din typescriptkode
